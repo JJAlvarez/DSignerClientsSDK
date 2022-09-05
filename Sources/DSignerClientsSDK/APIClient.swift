@@ -25,6 +25,8 @@ public class APIClient {
     //InitSession
     public func initSession(
         installation: String,
+        dpi: String,
+        platformIdentifier: String,
         completionHandler: @escaping(Result<InitializationResponse,Error>) -> Void
     ){
         
@@ -33,6 +35,8 @@ public class APIClient {
         let params: Dictionary = [
             "License": self.license,
             "Installation": installation,
+            "Dpi": dpi,
+            "PlatformIdentifier": platformIdentifier
         ]
 
         let credential = URLCredential(user: "", password: "", persistence: .forSession );
@@ -226,13 +230,14 @@ public class APIClient {
     
     //ValidateUser
     public func validateUser(
-        installation: String,
+        installation: String?,
+        dpi: String?,
         completionHandler: @escaping(Result<ValidateUserResponse,Error>) -> Void
     ){
         
         let url = self.baseUrl + Endpoints.SEND_FILE_EMAIL.rawValue
 
-        let params : Dictionary = ["Installation": installation]
+        let params : Dictionary = ["Installation": installation, "Dpi": dpi]
 
         let headers: HTTPHeaders = [
             .contentType("application/json")
