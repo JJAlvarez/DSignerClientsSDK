@@ -235,7 +235,7 @@ public class APIClient {
         completionHandler: @escaping(Result<ValidateUserResponse,Error>) -> Void
     ){
         
-        let url = self.baseUrl + Endpoints.SEND_FILE_EMAIL.rawValue
+        let url = self.baseUrl + Endpoints.VALIDATE_USER.rawValue
 
         let params : Dictionary = ["Installation": installation, "Dpi": dpi]
 
@@ -287,7 +287,7 @@ public class APIClient {
         completionHandler: @escaping(Result<UpdateSignResponse,Error>) -> Void
     ){
         
-        let url = self.baseUrl + Endpoints.SEND_FILE_EMAIL.rawValue
+        let url = self.baseUrl + Endpoints.UPDATE_SIGN.rawValue
 
         let params : Dictionary = ["Sign": sign]
 
