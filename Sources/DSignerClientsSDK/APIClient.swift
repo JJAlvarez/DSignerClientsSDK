@@ -231,13 +231,12 @@ public class APIClient {
     //ValidateUser
     public func validateUser(
         installation: String?,
-        dpi: String?,
         completionHandler: @escaping(Result<ValidateUserResponse,Error>) -> Void
     ){
         
         let url = self.baseUrl + Endpoints.VALIDATE_USER.rawValue
 
-        let params : Dictionary = ["Installation": installation, "Dpi": dpi]
+        let params : Dictionary = ["Installation": installation]
 
         let headers: HTTPHeaders = [
             .contentType("application/json")
