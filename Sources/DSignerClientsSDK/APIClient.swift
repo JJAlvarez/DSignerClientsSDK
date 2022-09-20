@@ -137,12 +137,8 @@ public class APIClient {
         let url = self.baseUrl + Endpoints.REJECT_FILE.rawValue
 
         let params : Dictionary = ["FileId": fileId, "Comment": comment ?? ""] as [String : Any]
-
-        let headers: HTTPHeaders = [
-            .contentType("application/json")
-        ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: RejectFileResponse.self) { response in
+        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: RejectFileResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -170,12 +166,8 @@ public class APIClient {
         let url = self.baseUrl + Endpoints.SIGN_FILE.rawValue
 
         let params : Dictionary = ["FileId": fileId]
-
-        let headers: HTTPHeaders = [
-            .contentType("application/json")
-        ]
-     
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: SignFileResponse.self) { response in
+        
+        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: SignFileResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -204,12 +196,8 @@ public class APIClient {
         let url = self.baseUrl + Endpoints.SEND_FILE_EMAIL.rawValue
 
         let params : Dictionary = ["FileId": fileId, "Email": email] as [String : Any]
-
-        let headers: HTTPHeaders = [
-            .contentType("application/json")
-        ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: SendFileEmailResponse.self) { response in
+        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: SendFileEmailResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -237,12 +225,8 @@ public class APIClient {
         let url = self.baseUrl + Endpoints.VALIDATE_USER.rawValue
 
         let params : Dictionary = ["Installation": installation]
-
-        let headers: HTTPHeaders = [
-            .contentType("application/json")
-        ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: ValidateUserResponse.self) { response in
+        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: ValidateUserResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))
@@ -289,12 +273,8 @@ public class APIClient {
         let url = self.baseUrl + Endpoints.UPDATE_SIGN.rawValue
 
         let params : Dictionary = ["Sign": sign]
-
-        let headers: HTTPHeaders = [
-            .contentType("application/json")
-        ]
      
-        AF.request(url, method: .post, parameters: params, headers: headers).validate().responseDecodable(of: UpdateSignResponse.self) { response in
+        AF.request(url, method: .post, parameters: params).validate().responseDecodable(of: UpdateSignResponse.self) { response in
             guard let data = response.data else {
                 
                 completionHandler(.failure(response.error!))

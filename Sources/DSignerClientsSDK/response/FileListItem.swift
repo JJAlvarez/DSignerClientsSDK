@@ -11,7 +11,7 @@ import Foundation
 public struct FileListItem: Codable {
     public let fileId: Int?
     public let name: String?
-    public let caseNo: Int?
+    public let caseNo: String?
     public let expirationDate: String?
     public let createdDate: String?
 
