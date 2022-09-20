@@ -13,7 +13,7 @@ public struct UpdateSignResponse: Codable {
     public var state: UpdateSignState?
     public let errorCode: String?
     public let message: String?
-    let signState: String?
+    public let signState: String?
 
     enum CodingKeys: String, CodingKey {
         case signState = "State"

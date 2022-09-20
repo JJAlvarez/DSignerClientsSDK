@@ -13,7 +13,7 @@ public struct ValidateUserResponse: Codable {
     public var userState: UserEnrollmentState?
     public let errorCode: String?
     public let message: String?
-    let userSignState: String?
+    public let userSignState: String?
 
     enum CodingKeys: String, CodingKey {
         case userSignState = "UserState"
