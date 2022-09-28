@@ -9,11 +9,11 @@ import Foundation
 
 // MARK: - FileListItem
 public struct FileListItem: Codable {
-    public let fileId: Int?
-    public let name: String?
-    public let caseNo: String?
-    public let expirationDate: String?
-    public let createdDate: String?
+    public let fileId: Int
+    public let name: String
+    public let caseNo: String
+    public let expirationDate: String
+    public let createdDate: String
 
     enum CodingKeys: String, CodingKey {
         case fileId = "FileId"

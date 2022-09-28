@@ -9,11 +9,11 @@ import Foundation
 
 // MARK: - GetFileResponse
 public struct GetFileResponse: Codable {
-    public let fileData: String?
-    public let name: String?
-    public let caseNo: Int?
-    public let expirationDate: Date?
-    public let createdDate: Date?
+    public let fileData: String
+    public let name: String
+    public let caseNo: Int
+    public let expirationDate: String
+    public let createdDate: String
     public let code: Int?
     public let message: String?
 
