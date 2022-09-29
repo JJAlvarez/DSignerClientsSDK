@@ -11,7 +11,7 @@ import Foundation
 public struct GetFileResponse: Codable {
     public let fileData: String
     public let name: String
-    public let caseNo: Int
+    public let caseNo: String
     public let expirationDate: String
     public let createdDate: String
     public let code: Int?
