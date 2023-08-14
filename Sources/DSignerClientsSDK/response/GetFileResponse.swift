@@ -16,6 +16,8 @@ public struct GetFileResponse: Codable {
     public let createdDate: String
     public let code: Int?
     public let message: String?
+    public let fileId: Int
+    public let isTestFile: Bool
 
     enum CodingKeys: String, CodingKey {
         case fileData = "FileData"
@@ -25,5 +27,7 @@ public struct GetFileResponse: Codable {
         case createdDate = "CreatedDate"
         case code = "Code"
         case message = "Message"
+        case fileId = "FileId"
+        case isTestFile = "IsTestFile"
     }
 }

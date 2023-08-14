@@ -14,6 +14,9 @@ public struct FileListItem: Codable {
     public let caseNo: String
     public let expirationDate: String
     public let createdDate: String
+    public let rejectedDate: String?
+    public let signDate: String?
+    public let isTestFile: Bool
 
     enum CodingKeys: String, CodingKey {
         case fileId = "FileId"
@@ -21,5 +24,8 @@ public struct FileListItem: Codable {
         case caseNo = "CaseNo"
         case expirationDate = "ExpirationDate"
         case createdDate = "CreatedDate"
+        case rejectedDate = "RejectedDate"
+        case signDate = "SignDate"
+        case isTestFile = "IsTestFile"
     }
 }
