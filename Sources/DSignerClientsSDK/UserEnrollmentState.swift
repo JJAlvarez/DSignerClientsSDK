@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by José Mangandid on 11/08/22.
 //
@@ -13,4 +13,6 @@ public enum UserEnrollmentState {
     case USER_EXPIRED_ENROLLMENT
     case USER_ENROLLED
     case USER_REJECTED_ENROLLMENT
+    case USER_PENDING_ENROLLMENT
+    case USER_EXPIRED_REJECTED_ENROLLMENT
 }
